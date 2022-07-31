@@ -1,38 +1,108 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
+
+html,
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Navbar */
+.nav {
+  background-color: #f55a5a;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 0.5rem;
+  height: 70px;
 }
 
-.App-link {
-  color: #61dafb;
+.nav--logo {
+  height: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.nav--title {
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: -0.075em;
+  color: #ffffff;
+}
+
+/* Journal */
+.journal {
+  margin: 3rem 4rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.journal--image {
+  width: 225px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.journal--info {
+  height: 268px;
+  width: 100%;
+}
+
+.journal--info__top {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+.journal--info__top__locationLogo {
+  height: 20px;
+  margin-right: 0.4rem;
+}
+
+.journal--info__top__country {
+  line-height: 12px;
+  letter-spacing: 0.17em;
+  font-weight: 400;
+  color: #2b283a;
+  font-size: 16px;
+  margin-right: 1.5rem;
+}
+
+.journal--info__top__mapLink {
+  line-height: 12px;
+  color: #918e9b;
+  font-size: 16px;
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+}
+
+.journal--info__location {
+  margin-top: 1rem;
+  line-height: 30px;
+  font-size: 40px;
+  color: #2b283a;
+  font-weight: 700;
+}
+
+.journal--info__date {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 12px;
+  color: #2b283a;
+}
+
+.journal--info__text {
+  font-size: 20px;
+  line-height: 150%;
+  font-weight: 400;
+  color: #2b283a;
+}
+
+@media screen and (max-width: 800px) {
+  .journal {
+    flex-wrap: wrap;
   }
 }
